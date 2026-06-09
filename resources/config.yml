@@ -1,0 +1,16 @@
+death-messages:
+default: "&c{player} died."
+
+player: "&c{player} was killed by {killer}."
+arrow: "&c{player} was shot by {killer}."
+
+suffocation: "&c{player} suffocated in a wall."
+fall: "&c{player} fell from a high place."
+fire: "&c{player} went up in flames."
+fire-tick: "&c{player} burned to death."
+lava: "&c{player} tried to swim in lava."
+drowning: "&c{player} drowned."
+explosion: "&c{player} exploded."
+suicide: "&c{player} committed suicide."
+magic: "&c{player} was killed by a spell."
+contact: "&c{player} was killed by {block}."
