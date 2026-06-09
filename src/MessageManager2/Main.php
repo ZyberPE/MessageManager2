@@ -119,14 +119,16 @@ public function onDeath(PlayerDeathEvent $event) : void{
             }
         }
 
-        $message = str_replace(
-            "{player}",
-            $player->getName(),
-            $message
-        );
+$message = str_replace(
+    "{player}",
+    $player->getName(),
+    $message
+);
 
-        $event->setDeathMessage(
-            TextFormat::colorize($message)
-        );
+$this->getLogger()->info("Generated message: " . $message);
+
+$event->setDeathMessage(
+    TextFormat::colorize($message)
+);
     }
 }
