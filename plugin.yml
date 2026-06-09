@@ -1,0 +1,6 @@
+name: MessageManager2
+version: 1.0.0
+api: 5.0.0
+  main: MessageManager2\Main
+  author: ZyberPE
+  description: Custom configurable death messages
