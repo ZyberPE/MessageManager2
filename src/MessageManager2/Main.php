@@ -28,9 +28,14 @@ public function onDeath(PlayerDeathEvent $event) : void{
     $player = $event->getPlayer();
     $cause = $player->getLastDamageCause();
 
-        $message = (string) $this->getConfig()->getNested(
-            "death-messages.default",
-            "&c{player} died."
+    $message = $this->getConfig()->getNested(
+    "death-messages.default",
+    "&c{player} died."
+);
+
+if($message === null || $message === ""){
+    $message = "&c{player} died.";
+}
         );
 
         if($cause instanceof EntityDamageByEntityEvent){
