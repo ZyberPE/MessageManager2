@@ -20,9 +20,11 @@ class Main extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
-    public function onDeath(PlayerDeathEvent $event) : void{
-        $player = $event->getPlayer();
-        $cause = $player->getLastDamageCause();
+public function onDeath(PlayerDeathEvent $event) : void{
+    $this->getLogger()->info("Death event fired!");
+
+    $player = $event->getPlayer();
+    $cause = $player->getLastDamageCause();
 
         $message = (string) $this->getConfig()->getNested(
             "death-messages.default",
