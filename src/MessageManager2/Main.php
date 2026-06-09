@@ -18,7 +18,7 @@ class Main extends PluginBase implements Listener{
 public function onEnable() : void{
     $this->saveDefaultConfig();
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
-
+    $this->getLogger()->info("Config contents: " . json_encode($this->getConfig()->getAll()));
     $this->getLogger()->info("MessageManager2 enabled!");
 }
 
