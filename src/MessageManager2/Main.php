@@ -15,10 +15,12 @@ use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener{
 
-    public function onEnable() : void{
-        $this->saveDefaultConfig();
-        $this->getServer()->getPluginManager()->registerEvents($this, $this);
-    }
+public function onEnable() : void{
+    $this->saveDefaultConfig();
+    $this->getServer()->getPluginManager()->registerEvents($this, $this);
+
+    $this->getLogger()->info("MessageManager2 enabled!");
+}
 
 public function onDeath(PlayerDeathEvent $event) : void{
     $this->getLogger()->info("Death event fired!");
